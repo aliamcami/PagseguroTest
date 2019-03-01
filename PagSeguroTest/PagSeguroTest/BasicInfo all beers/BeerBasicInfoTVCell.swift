@@ -13,6 +13,8 @@ class BeerBasicInfoTVCell: UITableViewCell {
     @IBOutlet weak var beerImageView: UIImageView!
     @IBOutlet weak var abvLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var defaultBeerBackground: UIImageView!
+    
     var beer: Beer? {
         didSet{
             if let beer = self.beer{

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Hero
 
 class ShowAllBeersTableVC: UITableViewController {
     private var content = [Beer]()
@@ -15,7 +16,7 @@ class ShowAllBeersTableVC: UITableViewController {
         super.viewDidLoad()
         self.tableView.backgroundColor = UIColor.orange.withAlphaComponent(0.5)
         loadContent()
-
+        navigationController?.hero.isEnabled = true
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -101,6 +102,11 @@ class ShowAllBeersTableVC: UITableViewController {
         // Pass the selected object to the new view controller.
         if let cell = sender as? BeerBasicInfoTVCell,
             let beerDetail = segue.destination as? BeerDetailVC{
+            cell.beerImageView.hero.id = "beerImage"
+            cell.nameLabel.hero.id = "nameLabel"
+            cell.abvLabel.hero.id = "abvLabel"
+            cell.defaultBeerBackground.hero.id = "defaultBeerBackground"
+            
             beerDetail.beer = cell.beer
         }
     }

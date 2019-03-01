@@ -68,6 +68,7 @@
                                 <connections>
                                     <outlet property="abvLabel" destination="MhS-l0-VOG" id="ukj-Gj-pR6"/>
                                     <outlet property="beerImageView" destination="qbA-ee-s6D" id="qbh-1R-9J5"/>
+                                    <outlet property="defaultBeerBackground" destination="kpr-LR-90b" id="KoR-sf-Qop"/>
                                     <outlet property="nameLabel" destination="JO6-aA-amX" id="bnX-Np-I0G"/>
                                     <segue destination="h9r-xe-12Z" kind="show" identifier="showDetailsIdentifier" id="IzJ-wW-JSW"/>
                                 </connections>
@@ -165,6 +166,7 @@
                     </view>
                     <connections>
                         <outlet property="abvLabel" destination="EIb-H1-izQ" id="zcj-Ms-VYE"/>
+                        <outlet property="defaultBeerBackground" destination="deA-cx-1Ze" id="VRp-pR-743"/>
                         <outlet property="descriptionTextView" destination="b4H-KV-2az" id="Hej-dC-QiI"/>
                         <outlet property="headerImageView" destination="rJF-Or-Q46" id="q9K-Yr-IDc"/>
                         <outlet property="ibuLabel" destination="GAs-Ee-9pM" id="OhP-wv-30n"/>

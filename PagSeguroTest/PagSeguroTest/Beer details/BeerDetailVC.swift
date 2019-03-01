@@ -17,13 +17,17 @@ class BeerDetailVC: UIViewController {
     @IBOutlet weak var taglineLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var headerImageView: UIImageView!
+    @IBOutlet weak var defaultBeerBackground: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupNavigationBar()
-        
         setDetails()
+        
+        hero.isEnabled = true
+        hero.modalAnimationType = .fade
+        view.hero.modifiers = [.translate(y:100)]
+        
     }
     
     private func setupNavigationBar(){
@@ -41,6 +45,11 @@ class BeerDetailVC: UIViewController {
             taglineLabel.text = beer.tagline
             descriptionTextView.attributedText = formatLineHeight(beer.description)
             headerImageView.setBeerImage(beer)
+            
+            abvLabel.hero.id = "abvLabel"
+            nameLabel.hero.id = "nameLabel"
+            headerImageView.hero.id = "beerImage"
+            defaultBeerBackground.hero.id = "defaultBeerBackground"
         }
     }
     
