@@ -9,14 +9,22 @@
 import UIKit
 
 extension UIImageView{
-    func setImage(from url: URL?){
-        guard let url = url else{ return }
-        let task = URLSession.shared.dataTask(with: url) { (data, resp, err) in
-            guard let data = data else{ return }
-            
+    func setBeerImage(_ beer: Beer){
+        func setImage(data: Data){
             DispatchQueue.main.async {
                 self.image = UIImage(data: data)
             }
+        }
+        
+        if let data = beer.imageData{
+            setImage(data: data)
+            return
+        }
+        
+        let task = URLSession.shared.dataTask(with: beer.image_url) { (data, resp, err) in
+            guard let data = data else{ return }
+            beer.imageData = data
+            setImage(data: data)
         }
         
         task.resume()

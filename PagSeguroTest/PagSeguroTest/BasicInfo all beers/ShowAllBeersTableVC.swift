@@ -102,7 +102,6 @@ class ShowAllBeersTableVC: UITableViewController {
         if let cell = sender as? BeerBasicInfoTVCell,
             let beerDetail = segue.destination as? BeerDetailVC{
             beerDetail.beer = cell.beer
-            beerDetail.image = cell.beerImageView.image
         }
     }
  

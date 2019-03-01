@@ -10,7 +10,6 @@ import UIKit
 
 class BeerDetailVC: UIViewController {
     var beer: Beer?
-    var image: UIImage?
     
     @IBOutlet weak var abvLabel: UILabel! //teor alcolico
     @IBOutlet weak var ibuLabel: UILabel! //amargor
@@ -21,24 +20,27 @@ class BeerDetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupNavigationBar()
+        
         setDetails()
     }
     
+    private func setupNavigationBar(){
+//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+//        self.navigationController?.view.backgroundColor = UIColor.black
+    }
+    
     private func setDetails(){
-        
         if let beer = self.beer{
             abvLabel.text = "Teor alcoólico: \(beer.abv)"
-            ibuLabel.text = "Amargor: \(beer.ibu ?? 0)"
+            ibuLabel.text = "Amargor: \(beer.ibu == nil ? "??" : "\(beer.ibu!)")"
             nameLabel.text = beer.name
             taglineLabel.text = beer.tagline
             descriptionTextView.attributedText = formatLineHeight(beer.description)
-            if image == nil{
-                headerImageView.setImage(from: beer.image_url)
-            }else{
-                headerImageView.image = image
-            }
-            
-//            headerImageView.image.insets
+            headerImageView.setBeerImage(beer)
         }
     }
     

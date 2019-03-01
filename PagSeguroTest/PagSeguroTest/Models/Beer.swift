@@ -8,12 +8,13 @@
 
 import UIKit
 
-struct Beer: Codable {
+class Beer: Codable {
     var image_url: URL
     var name: String
     var abv: Double
     var tagline: String
     var ibu: Double?
     var description: String
+    var imageData: Data?
 }
 

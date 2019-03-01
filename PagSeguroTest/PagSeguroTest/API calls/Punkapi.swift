@@ -17,7 +17,6 @@ class Punkapi: NSObject {
             guard let data = data,
             let beersData = self.toValidData(data: data)
                 else {
-                    print("errado")
                     return }
             
              let beers = self.instantiateBeers(beersData)

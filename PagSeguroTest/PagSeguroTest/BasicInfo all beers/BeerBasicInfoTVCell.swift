@@ -28,8 +28,8 @@ class BeerBasicInfoTVCell: UITableViewCell {
     
     private func updateInfo(beer: Beer){
         self.abvLabel.text = "Teor alcoólico: \(beer.abv)"
-        self.nameLabel.text = beer.name.uppercased()
-        self.beerImageView.setImage(from: beer.image_url)
+        self.nameLabel.text = beer.name
+        self.beerImageView.setBeerImage(beer)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
