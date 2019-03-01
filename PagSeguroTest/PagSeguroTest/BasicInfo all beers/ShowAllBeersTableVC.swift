@@ -13,7 +13,7 @@ class ShowAllBeersTableVC: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.tableView.backgroundColor = UIColor.black
         loadContent()
 
         // Uncomment the following line to preserve selection between presentations
@@ -47,8 +47,8 @@ class ShowAllBeersTableVC: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "basicInfo", for: indexPath) as! BeerGeneralInfoTVCell
-        cell.setBeer(beer: content[indexPath.row])
+        let cell = tableView.dequeueReusableCell(withIdentifier: "basicInfo", for: indexPath) as! BeerBasicInfoTVCell
+        cell.beer = content[indexPath.row]
 
         return cell
     }
@@ -92,14 +92,30 @@ class ShowAllBeersTableVC: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if let cell = sender as? BeerBasicInfoTVCell,
+            let beerDetail = segue.destination as? BeerDetailVC{
+            beerDetail.beer = cell.beer
+            beerDetail.image = cell.beerImageView.image
+        }
     }
-    */
+ 
 
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: animated);
+        super.viewWillDisappear(animated)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    
 }

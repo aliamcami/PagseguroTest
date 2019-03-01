@@ -8,20 +8,25 @@
 
 import UIKit
 
-class BeerGeneralInfoTVCell: UITableViewCell {
+class BeerBasicInfoTVCell: UITableViewCell {
 
     @IBOutlet weak var beerImageView: UIImageView!
     @IBOutlet weak var abvLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
-    private var beer: Beer?
+    var beer: Beer? {
+        didSet{
+            if let beer = self.beer{
+                self.updateInfo(beer: beer)
+            }
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
-    func setBeer(beer: Beer){
-        self.beer = beer
+    private func updateInfo(beer: Beer){
         self.abvLabel.text = "Teor alcoólico: \(beer.abv)"
         self.nameLabel.text = beer.name.uppercased()
         self.beerImageView.setImage(from: beer.image_url)
