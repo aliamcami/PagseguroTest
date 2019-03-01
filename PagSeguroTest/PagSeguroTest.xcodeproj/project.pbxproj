@@ -15,6 +15,9 @@
 		863315AC2229B12A00994B15 /* PagSeguroTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863315AB2229B12A00994B15 /* PagSeguroTestTests.swift */; };
 		863315B72229B14A00994B15 /* Punkapi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863315B62229B14A00994B15 /* Punkapi.swift */; };
 		863315B92229B1A200994B15 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863315B82229B1A200994B15 /* Beer.swift */; };
+		863315BB2229C27100994B15 /* ExtensionUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863315BA2229C27100994B15 /* ExtensionUIImageView.swift */; };
+		863315BD2229C2F400994B15 /* ShowAllBeersTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863315BC2229C2F400994B15 /* ShowAllBeersTableVC.swift */; };
+		863315BF2229C67300994B15 /* BeerBasicInfoTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863315BE2229C67300994B15 /* BeerBasicInfoTVCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,9 @@
 		863315AD2229B12A00994B15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		863315B62229B14A00994B15 /* Punkapi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Punkapi.swift; sourceTree = "<group>"; };
 		863315B82229B1A200994B15 /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
+		863315BA2229C27100994B15 /* ExtensionUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIImageView.swift; sourceTree = "<group>"; };
+		863315BC2229C2F400994B15 /* ShowAllBeersTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAllBeersTableVC.swift; sourceTree = "<group>"; };
+		863315BE2229C67300994B15 /* BeerBasicInfoTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerBasicInfoTVCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +89,11 @@
 			children = (
 				863315962229B12800994B15 /* AppDelegate.swift */,
 				863315982229B12800994B15 /* ViewController.swift */,
+				863315BC2229C2F400994B15 /* ShowAllBeersTableVC.swift */,
 				863315B62229B14A00994B15 /* Punkapi.swift */,
+				863315BA2229C27100994B15 /* ExtensionUIImageView.swift */,
 				8633159A2229B12800994B15 /* Main.storyboard */,
+				863315BE2229C67300994B15 /* BeerBasicInfoTVCell.swift */,
 				863315B82229B1A200994B15 /* Beer.swift */,
 				8633159D2229B12A00994B15 /* Assets.xcassets */,
 				8633159F2229B12A00994B15 /* LaunchScreen.storyboard */,
@@ -203,6 +212,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				863315BD2229C2F400994B15 /* ShowAllBeersTableVC.swift in Sources */,
+				863315BB2229C27100994B15 /* ExtensionUIImageView.swift in Sources */,
+				863315BF2229C67300994B15 /* BeerBasicInfoTVCell.swift in Sources */,
 				863315B72229B14A00994B15 /* Punkapi.swift in Sources */,
 				863315992229B12800994B15 /* ViewController.swift in Sources */,
 				863315972229B12800994B15 /* AppDelegate.swift in Sources */,

@@ -9,13 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        Punkapi().beerList()
-        // Do any additional setup after loading the view, typically from a nib.
+        let api = Punkapi()
+        api.beerList { beers in
+            guard let first = beers.first else{ return }
+            self.imageView.setImage(from: first.image_url)
+        }
     }
-
-
 }
 
