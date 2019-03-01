@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Show All Beers TableVC-->
+        <!--Beer List-->
         <scene sceneID="rgE-Yf-T3h">
             <objects>
                 <tableViewController id="qod-rJ-gjx" customClass="ShowAllBeersTableVC" customModule="PagSeguroTest" customModuleProvider="target" sceneMemberID="viewController">
@@ -78,7 +78,7 @@
                             <outlet property="delegate" destination="qod-rJ-gjx" id="Rjs-E2-tPL"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="2Bk-T3-f9f"/>
+                    <navigationItem key="navigationItem" title="Beer List" id="2Bk-T3-f9f"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hey-5t-j5Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -181,7 +181,6 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="p6x-oq-dqp" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="blackTranslucent" id="hzm-xU-WSP">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
